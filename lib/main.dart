@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.green,
         ),
-        home: ProductsOverviewScreen(),
+        home: const ProductsOverviewScreen(),
         routes: {
           ProductDetailedScreen.routeName: (context)=> const ProductDetailedScreen(),
         },
