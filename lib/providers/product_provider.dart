@@ -38,13 +38,13 @@ class ProductProvider with ChangeNotifier {
   ];
   var _isFavorite = false;
   List<Product> get items {
-      notifyListeners();
-      return [..._items];
+    notifyListeners();
+    return [..._items];
   }
 
   List<Product> get getFavorites {
     notifyListeners();
-  return _items.where((product) => product.isFavorite).toList();
+    return _items.where((product) => product.isFavorite).toList();
   }
 
   // void showFavorite() {

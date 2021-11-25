@@ -18,7 +18,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
       appBar: AppBar(
         title: const Text('Kiosk moto moto'),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.login)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.radio_button_checked)),
           PopupMenuButton(
               onSelected: (FilterOptions selectedValue) {
                 if (selectedValue == FilterOptions.favorite) {
