@@ -13,17 +13,22 @@ class ProductDetailedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context)?.settings.arguments as String;
-    final loadedProduct = Provider.of<ProductProvider>(context, listen: false).findById(productId);
+    final loadedProduct = Provider.of<ProductProvider>(context, listen: false)
+        .findById(productId);
+    final ldProuct = context.read<ProductProvider>().items..firstWhere((prod) => prod.id == productId);
+    print(ldProuct);
 
-    return Scaffold(appBar: AppBar(title: Text(loadedProduct.title!)),
-    body: Center(child: Hero(
-      tag:loadedProduct.title! ,
-      child: Image.network(
-            loadedProduct.imageUrl!,
+    return Scaffold(
+      appBar: AppBar(title: Text(loadedProduct.title!)),
+      body: Center(
+        child: Hero(
+          tag: loadedProduct.title!,
+          child: Image.network(
+            ldProuct.toString(),
             fit: BoxFit.cover,
           ),
-    ),
         ),
+      ),
     );
   }
 }

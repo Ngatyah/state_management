@@ -38,5 +38,11 @@ class Cart with ChangeNotifier {
               title: title,
               quantity: 1));
     }
+    notifyListeners();
+  }
+
+  int itemCount() {
+    notifyListeners();
+    return _items.length;
   }
 }
