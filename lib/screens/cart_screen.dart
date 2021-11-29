@@ -10,8 +10,8 @@ class CartScreen extends StatelessWidget {
     final cartContents = Provider.of<Cart>(context, listen: true).items;
     return Row(
       children: [
-      const Card(
-        child: ListTile(
+    Card(
+        child: const ListTile(
 trailing: Text('Working'),
         )
       )
